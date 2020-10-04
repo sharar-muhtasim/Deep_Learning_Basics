@@ -8,7 +8,7 @@ import pandas as pd
 desired_width = 320
 pd.set_option('display.width', desired_width)
 pd.set_option("display.max_columns", 20)
-print("boobs")
+print("Pandas initialized")
 
 
 # In[18]:
@@ -22,15 +22,14 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.layers.experimental import preprocessing
-print("boobs")
-
+print("Tensorflow initialized")
 
 # In[4]:
 
 
 scores = pd.read_csv(r"F:\Machine Learning Shit My Own\StudentsPerformance.csv")
 scores=scores[["math score", "reading score","writing score"]]
-scores.head()
+#scores.head()
 
 
 # In[5]:
@@ -38,14 +37,14 @@ scores.head()
 
 scores_features = scores.copy()
 scores_labels = scores_features.pop("writing score")
-scores_labels.head()
+#scores_labels.head()
 
 
 # In[6]:
 
 
 scores_features = np.array(scores_features)
-print(scores_features)
+#print(scores_features)
 
 
 # In[7]:
@@ -53,7 +52,7 @@ print(scores_features)
 
 normalize = preprocessing.Normalization()
 normalize.adapt(scores_features)
-print("boobs")
+print("Normalized")
 
 
 # In[8]:
